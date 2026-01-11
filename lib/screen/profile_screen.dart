@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import '../core/app_colors.dart';
 import 'edit_profile_screen.dart';
 import 'signin_screen.dart'; // Import halaman Sign In
+import 'riwayat_lamaran_screen.dart';
+import 'ulasan_feedback_screen.dart';
+import 'keamanan_akun_screen.dart';
+import 'bahasa_screen.dart';
+import 'pusat_bantuan_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -227,31 +232,41 @@ class ProfileScreen extends StatelessWidget {
                     _buildMenuTile(
                       icon: Icons.work_history_outlined,
                       title: "Riwayat Lamaran",
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_) => const RiwayatLamaranScreen()));
+                      },
                     ),
                     _buildDivider(),
                     _buildMenuTile(
                       icon: Icons.star_outline_rounded,
                       title: "Ulasan & Feedback",
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_) => const UlasanFeedbackScreen()));
+                      },
                     ),
                     _buildDivider(),
                     _buildMenuTile(
                       icon: Icons.security_outlined,
                       title: "Keamanan Akun",
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_) => const KeamananAkunScreen()));
+                      },
                     ),
                     _buildDivider(),
                     _buildMenuTile(
                       icon: Icons.language_rounded,
                       title: "Bahasa",
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_) => const BahasaScreen()));
+                      },
                     ),
                     _buildDivider(),
                     _buildMenuTile(
                       icon: Icons.help_outline_rounded,
                       title: "Pusat Bantuan",
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_) => const PusatBantuanScreen()));
+                      },
                     ),
                     _buildDivider(),
                     _buildMenuTile(
